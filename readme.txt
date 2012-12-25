@@ -11,15 +11,13 @@ iframe embed code.
 
 == Description ==
 
-This plugin allows the user to quickly & easily embed a Prezi in Wordpress site by directly implementing the published 
-iframe embed code.
-
 This plugin, like most things useful, grew out of a need. I had a Prezi and I had a WordPress blog. I Googled for a 
-few hours and found some very dirty hacks that ended up not working, as well as a plugin or two that didn't work, or 
-only half worked. When I realized that there were no *good* solutions around, I decided to create one.
+few hours, trying to find a way to embed one within the other, and found some dirty hacks that ended up not working, 
+as well as a plugin or two that didn't work, or only half worked. When I realized that there were no *good* solutions 
+for this issue, I decided to create one.
 
-This plugin is based on simplicity, making it extremely robust. On the back end, it is actually extremely simple. 
-It takes the code that Prezi provides when you the the iframe embed code and simply inserts the variables that you
+This plugin is based on simplicity, making it extremely robust. On the back end, it is actually only a few lines of code. 
+It takes the embed code that Prezi provides when click the share option and simply inserts the values that you
 need before rendering a working Prezi.
 
 I hope that you all find this plugin as useful as I have.
@@ -33,12 +31,10 @@ your support!
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place `[prezi id="<Prezi ID>"]` in any post or page were you want to embed a Prezi.
 
-You can find your Prezi ID in a few different places. The easiest is to go to the URL for your Prezi, which 
-will look something like this: `http://prezi.com/<Prezi ID>/<Prezi Name>`. All you need to do is extract the 
-Prezi ID section and include it in the shortcode above. That's it!
-
-*EDIT:* It's now _even easier_ to embed your Prezi. Just paste the entire URL (http://prezi.com/<blah, blah, blah>) 
-for your id. The plugin will handle extracting the ID!
+To find your Prezi ID, the easiest solution is to simply copy the URL of your Prezi, which should look something 
+like this: *http://prezi.com/<Prezi ID>/<Prezi Slug>*. If you paste that URL exactly as it is, the plugin is 
+now smart enough to extract the ID for you. Alternatively, if you would like to do it the hard way, you can 
+manually extract the <Prezi ID> from that same URL.
 
 = Prezi Embedder Options =
 
@@ -48,10 +44,10 @@ In addition to a simple embed, you can also set some additional embed options:
 1. height (default = 400)
 1. lock_to_path (default = 0)
 
-With *lock_to_path*, the default allows viewers to pan & zoom freely. If you want to constrain viewers 
-to simple back and forward steps, set `lock_to_path=1`.
+With **lock_to_path**, the default value allows viewers to pan & zoom freely. If you wish to constrain viewers 
+to simple backward and forward steps, set `lock_to_path=1`.
 
-The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`:
+The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with defalut values explicitly set:
 
 `[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0]`
 
