@@ -3,7 +3,7 @@
 Plugin Name: Prezi Embedder
 Plugin URI: http://dan.rossiters.org/projects/program-development/prezi-embedder-plugin/
 Description: Allows for embedding the newest iframe-based Prezis from prezi.com using a simple shortcode [prezi id="<your id here>"].
-Version: 1.1
+Version: 1.1.1
 Author: Dan Rossiter
 Author URI: http://danrossiter.org/
 */
@@ -35,7 +35,10 @@ Author URI: http://danrossiter.org/
       $ptn = '#.*prezi.com/([^/]+).*#';
       $rpl = "$1";
       $id = preg_replace( $ptn, $rpl, $id );
-      return "<iframe src='http://prezi.com/embed/{$id}/?bgcolor=ffffff&amp;lock_to_path={$lock_to_path}&amp;autoplay=no&amp;autohide_ctrls=0' width='{$width}' height='{$height}' frameBorder='0'></iframe>";
+      return '<!-- Prezi Embedder -->'.PHP_EOL.
+             "<iframe src='http://prezi.com/embed/{$id}/?bgcolor=ffffff&amp;lock_to_path={$lock_to_path}&amp;autoplay=no&amp;autohide_ctrls=0' ".
+             "width='{$width}' height='{$height}' frameBorder='0'></iframe>".PHP_EOL.
+             '<!-- / Prezi Embedder -->'.PHP_EOL;
     }
   }
   add_shortcode( 'prezi', 'prezi_shortcode' );

@@ -3,28 +3,28 @@ Contributors: dan.rossiter
 Tags: prezi, embed, presentation, iframe
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows the user to quickly & easily embed a Prezi in Wordpress site by directly implementing the published 
+This plugin allows the user to quickly & easily embed a Prezi in WordPress site by directly implementing the published 
 iframe embed code.
 
 == Description ==
 
-This plugin, like most things useful, grew out of a need. I had a Prezi and I had a WordPress blog. I Googled for a 
-few hours, trying to find a way to embed one within the other, and found some dirty hacks that ended up not working, 
-as well as a plugin or two that didn't work, or only half worked. When I realized that there were no *good* solutions 
-for this issue, I decided to create one.
+This plugin, like most things useful, grew out of a need. I had a [Prezi](http://prezi.com/) and I had a WordPress blog. 
+I Googled for a few hours, trying to find a way to embed one within the other, and found some dirty hacks that ended up 
+not working, as well as a plugin or two that didn't work, or only half worked. When I realized that there were no *good* 
+solutions for this issue, I decided to create one.
 
 This plugin is based on simplicity, making it extremely robust. On the back end, it is actually only a few lines of code. 
-It takes the embed code that Prezi provides when click the share option and simply inserts the values that you
-need before rendering a working Prezi.
+It takes the embed code that Prezi provides when clicking the share option through their site and simply inserts the 
+necessary values that are needed to rendering a working Prezi.
 
-I hope that you all find this plugin as useful as I have.
+I hope that you all find this plugin as useful as I have!
 
-PS: If this plugin is helpful, please take a moment to give it the rating you believe it deserves. I truly appreciate 
-your support!
+*PS: If this plugin is helpful, please take a moment to give it the rating you believe it deserves. I truly appreciate 
+your support!*
 
 == Installation ==
 
@@ -48,15 +48,19 @@ In addition to a simple embed, you can also set some additional embed options:
 With **lock_to_path**, the default value allows viewers to pan & zoom freely. If you wish to constrain viewers 
 to simple backward and forward steps, set `lock_to_path=1`.
 
-The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with defalut values explicitly set:
+The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default values explicitly set:
 
 `[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0]`
 
 == Changelog ==
 
+= 1.1.1 =
+* **Bug Fix:** Corrected some typos in the documentation.
+* **Enhancement:** Cleaned up source code for easier reading.
+
 = 1.1 =
-* Enhancement: Shortcode now handles the full URL of the Prezi as an ID value (while still supporting just the id value).
-* Enhancement: Added some simple error checking for attribute values.
+* **Enhancement:** Shortcode now handles the full URL of the Prezi as an ID value (while still supporting just the id value).
+* **Enhancement:** Added some simple error checking for attribute values.
 
 = 1.0 =
-* Released: Initial release.
+* **Released:** Initial release.
