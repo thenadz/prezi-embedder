@@ -33,7 +33,7 @@ your support!*
 1. Place `[prezi id="<Prezi ID>"]` in any post or page were you want to embed a Prezi.
 
 To find your Prezi ID, the easiest solution is to simply copy the URL of your Prezi, which should look something 
-like this: *[http://prezi.com/&lt;Prezi ID&gt;/&lt;Prezi Slug&gt;](#)*. If you paste that URL exactly as it is, the plugin is 
+like this: *http&#58;//prezi.com/&lt;Prezi ID&gt;/&lt;Prezi Slug&gt;*. If you paste that URL exactly as it is, the plugin is 
 now smart enough to extract the ID for you. Alternatively, if you would like to do it the hard way, you can 
 manually extract the &lt;Prezi ID&gt; from that same URL.
 
