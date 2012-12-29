@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Prezi Embedder ===
 Contributors: dan.rossiter
 Tags: prezi, embed, presentation, iframe
 Requires at least: 2.5
@@ -53,6 +53,9 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 `[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0]`
 
 == Changelog ==
+
+= 1.1.2 =
+* **Bug Fix:** Corrected typo in readme.txt
 
 = 1.1.1 =
 * **Bug Fix:** Corrected some typos in the documentation.
