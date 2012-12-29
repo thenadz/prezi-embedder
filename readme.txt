@@ -3,7 +3,7 @@ Contributors: dan.rossiter
 Tags: prezi, embed, presentation, iframe
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,12 +30,12 @@ your support!*
 
 1. Upload `prezi-embedder` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `[prezi id="<Prezi ID>"]` in any post or page were you want to embed a Prezi.
+1. Place `[prezi id="&lt;Prezi ID&gt;"]` in any post or page were you want to embed a Prezi.
 
 To find your Prezi ID, the easiest solution is to simply copy the URL of your Prezi, which should look something 
-like this: *http://prezi.com/<Prezi ID>/<Prezi Slug>*. If you paste that URL exactly as it is, the plugin is 
+like this: *http://prezi.com/&lt;Prezi ID&gt;/&lt;Prezi Slug&gt;*. If you paste that URL exactly as it is, the plugin is 
 now smart enough to extract the ID for you. Alternatively, if you would like to do it the hard way, you can 
-manually extract the <Prezi ID> from that same URL.
+manually extract the &lt;Prezi ID&gt; from that same URL.
 
 = Prezi Embedder Options =
 
@@ -48,14 +48,15 @@ In addition to a simple embed, you can also set some additional embed options:
 With **lock_to_path**, the default value allows viewers to pan & zoom freely. If you wish to constrain viewers 
 to simple backward and forward steps, set `lock_to_path=1`.
 
-The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default values explicitly set:
+The following shortcode is equivalent to `[prezi id="&lt;Prezi ID&gt;"]`, with default values explicitly set:
 
-`[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0]`
+`[prezi id="&lt;Prezi ID&gt;" width=500 height=400 lock_to_path=0]`
 
 == Changelog ==
 
 = 1.1.2 =
-* **Bug Fix:** Corrected typo in readme.txt
+* **Bug Fix:** Corrected typos in readme.
+* **Update:** Changed plugin URL.
 
 = 1.1.1 =
 * **Bug Fix:** Corrected some typos in the documentation.

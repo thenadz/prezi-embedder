@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Prezi Embedder
-Plugin URI: http://dan.rossiters.org/projects/program-development/prezi-embedder-plugin/
-Description: Allows for embedding the newest iframe-based Prezis from prezi.com using a simple shortcode [prezi id="<your id here>"].
-Version: 1.1.1
+Plugin URI: http://wordpress.org/extend/plugins/prezi-embedder/
+Description: Allows for embedding the newest iframe-based Prezis from [prezi.com](http://prezi.com/) using a simple shortcode [prezi id="&lt;your id here&gt;"].
+Version: 1.1.2
 Author: Dan Rossiter
 Author URI: http://danrossiter.org/
 */
