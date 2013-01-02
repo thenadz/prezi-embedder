@@ -12,7 +12,7 @@ iframe embed code.
 
 == Description ==
 
-This plugin, like most things useful, grew out of a need. I had a [Prezi](http://http://prezi.com/recommend/qv1ms7qvtplw) 
+This plugin, like most things useful, grew out of a need. I had a [Prezi](http://www.prezi.com/recommend/qv1ms7qvtplw) 
 and I had a WordPress blog. I Googled for a few hours, trying to find a way to embed one within the other, and found some 
 dirty hacks that ended up not working, as well as a plugin or two that didn't work, or only half worked. When I realized 
 that there were no *good* solutions for this issue, I decided to create one.
