@@ -3,7 +3,7 @@ Contributors: dan.rossiter
 Tags: prezi, embed, presentation, iframe
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.1.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,7 +54,7 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 
 == Changelog ==
 
-= 1.1.3 =
+= 1.2 =
 * **Bug Fix:** Corrects issue with `lock_to_path` attribute. Thanks to **lhkstudio** for spotting this!
 
 = 1.1.2 =
