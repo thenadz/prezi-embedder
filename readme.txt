@@ -24,7 +24,7 @@ necessary values that are needed to rendering a working Prezi.
 I hope that you all find this plugin as useful as I have!
 
 *If this plugin has been helpful, please take a moment to
-[rate it](http://wordpress.org/support/view/plugin-reviews/prezi-embedder?rate)!*
+[rate it](http://wordpress.org/support/view/plugin-reviews/prezi-embedder#postform)!*
 
 == Installation ==
 
