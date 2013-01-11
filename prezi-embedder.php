@@ -3,7 +3,7 @@
 Plugin Name: Prezi Embedder
 Plugin URI: http://wordpress.org/extend/plugins/prezi-embedder/
 Description: Allows for embedding the newest iframe-based Prezis from <a href="http://www.prezi.com/recommend/qv1ms7qvtplw">prezi.com</a> using a simple shortcode [prezi id="&lt;your id here&gt;"].
-Version: 1.2
+Version: 1.3
 Author: Dan Rossiter
 Author URI: http://danrossiter.org/
 */
@@ -16,13 +16,19 @@ Author URI: http://danrossiter.org/
       'lock_to_path' => 0
     ), $atts ) );
 
+    $ptn = '#.*prezi.com/([^/]+).*#';
     $err = '';
 
     // VALIDATE INPUT
-    if(!is_numeric( $width ))
+    if( !($id = preg_replace( $ptn, '$1', $id )) ){
+	$err .= "Error: the id attribute provided does not look right. You entered id=$id. ";
+    }
+    if( (int)$width != $width || (int)$width < 1 ){
       $err .= "Error: width attribute must be numeric. You entered width=$width. ";
-    if(!is_numeric( $height ))
+    }
+    if( (int)$height != $height || (int)$height < 1 ){
       $err .= "Error: height attribute must be numeric. You entered height=$height. ";
+    }
     if($lock_to_path != 0 && $lock_to_path != 1)
       $err .= "Error: lock_to_path may only be 0 or 1. You entered lock_to_path=$lock_to_path. ";
     if(!$id)
@@ -32,9 +38,6 @@ Author URI: http://danrossiter.org/
     if($err){
       return $err;
     } else {
-      $ptn = '#.*prezi.com/([^/]+).*#';
-      $rpl = "$1";
-      $id = preg_replace( $ptn, $rpl, $id );
       return '<!-- Prezi Embedder -->'.PHP_EOL.
              "<iframe src='http://prezi.com/embed/{$id}/?bgcolor=ffffff&amp;lock_to_path={$lock_to_path}&amp;autoplay=no&amp;autohide_ctrls=0' ".
              "width='{$width}' height='{$height}' frameBorder='0'></iframe>".PHP_EOL.

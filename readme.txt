@@ -54,6 +54,9 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 
 == Changelog ==
 
+= 1.3 =
+* **Enhancement:** This release provides additional checks to be sure all attributes are correctly entered.
+
 = 1.2 =
 * **Bug Fix:** Corrects issue with `lock_to_path` attribute. Thanks to **lhkstudio** for spotting this!
 
