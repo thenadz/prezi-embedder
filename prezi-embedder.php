@@ -83,7 +83,7 @@ class PreziEmbedder {
       
       return
          self::$comment .
-         "<iframe src='http://prezi.com/embed/{$id}/?bgcolor=ffffff&amp;" .
+         "<iframe src='//prezi.com/embed/{$id}/?bgcolor=ffffff&amp;" .
          "lock_to_path={$lock_to_path}&amp;autoplay=0&amp;autohide_ctrls=0&amp;" .
          "features=undefined&amp;disabled_features=undefined' " .
          "width='{$width}' height='{$height}' frameBorder='0' " .
