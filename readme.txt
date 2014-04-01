@@ -1,9 +1,10 @@
 === Prezi Embedder ===
 Contributors: dan.rossiter
 Tags: prezi, embed, presentation, iframe
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EE5LWRLG933EN&lc=US&item_name=Prezi%20Embedder%20Plugin&item_number=prezi%2dembedder&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: 2.5
-Tested up to: 3.5
-Stable tag: 1.2
+Tested up to: 3.8.1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,7 +56,13 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 == Changelog ==
 
 = 1.3 =
-* **Enhancement:** This release provides additional checks to be sure all attributes are correctly entered.
+* **Enhancement:** Now uses Prezi's latest embed code, which includes cross-browser
+  full-screen support through use of [allowfullscreen](http://www.allowfullscreen.com/) attribute.
+* **Enhancement:** Prezi Embedder is now fully
+  [Internationalization-enabled](https://codex.wordpress.org/I18n_for_WordPress_Developers).
+  This means that we can now support users speaking all languages. If you are interested
+  in translating Prezi Embedder into a language that you speak, please
+  [let me know](http://wordpress.org/support/topic/seeking-translators-1)!
 
 = 1.2 =
 * **Bug Fix:** Corrects issue with `lock_to_path` attribute. Thanks to **lhkstudio** for spotting this!
