@@ -52,7 +52,7 @@ to simple backward and forward steps, set `lock_to_path=1`.
 
 The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default values explicitly set:
 
-`[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0]`
+`[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0 html5=1]`
 
 == Changelog ==
 
