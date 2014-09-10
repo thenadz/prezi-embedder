@@ -55,6 +55,10 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 
 == Changelog ==
 
+= 1.4 =
+* **Enhancement:** Added new [HTML5 option](http://prezibase.com/prezi-old-vs-new-player-embed-code/).
+* **Enhancement:** Made user input sanitization more robust.
+
 = 1.3 =
 * **Enhancement:** Now uses Prezi's latest embed code, which includes cross-browser
   full-screen support through use of [allowfullscreen](http://www.allowfullscreen.com/) attribute.
