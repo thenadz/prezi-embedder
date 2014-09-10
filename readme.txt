@@ -42,13 +42,10 @@ manually extract the &lt;Prezi ID&gt; from that same URL.
 
 In addition to a simple embed, you can also set some additional embed options:
 
-1. **width (default = 500)**: Width of viewer.
-1. **height (default = 400)**: Height of viewer.
-1. **lock_to_path (default = 0)**: Whether to restrain user navigation to Prezi path.
-1. **html5 (default = 1)**: True to use new HTML5 viewer, false to use Flash-based viewer.
-
-With **lock_to_path**, the default value allows viewers to pan & zoom freely. If you wish to constrain viewers 
-to simple backward and forward steps, set `lock_to_path=1`.
+1. **width (default = 500)**: Width of viewer in pixels.
+1. **height (default = 400)**: Height of viewer in pixels.
+1. **lock_to_path (default = 0)**: Whether to constrain user navigation to Prezi path (1), or let them roam free (0).
+1. **html5 (default = 1)**: True (1) to use new HTML5 viewer, false (0) to use Flash-based viewer.
 
 The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default values explicitly set:
 
