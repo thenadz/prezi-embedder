@@ -42,9 +42,10 @@ manually extract the &lt;Prezi ID&gt; from that same URL.
 
 In addition to a simple embed, you can also set some additional embed options:
 
-1. width (default = 500)
-1. height (default = 400)
-1. lock_to_path (default = 0)
+1. **width (default = 500)**: Width of viewer.
+1. **height (default = 400)**: Height of viewer.
+1. **lock_to_path (default = 0)**: Whether to restrain user navigation to Prezi path.
+1. **html5 (default = 1)**: True to use new HTML5 viewer, false to use Flash-based viewer.
 
 With **lock_to_path**, the default value allows viewers to pan & zoom freely. If you wish to constrain viewers 
 to simple backward and forward steps, set `lock_to_path=1`.
