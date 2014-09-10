@@ -20,7 +20,7 @@ that there were no *good* solutions for this issue, I decided to create one.
 
 This plugin is based on simplicity, making it extremely robust. On the back end, it is actually only a few lines of code. 
 It takes the embed code that Prezi provides when clicking the share option through their site and simply inserts the 
-necessary values that are needed to rendering a working Prezi.
+necessary values that are needed to render a working Prezi.
 
 I hope that you all find this plugin as useful as I have!
 
