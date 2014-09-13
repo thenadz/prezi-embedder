@@ -4,7 +4,7 @@ Tags: prezi, embed, presentation, iframe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EE5LWRLG933EN&lc=US&item_name=Prezi%20Embedder%20Plugin&item_number=prezi%2dembedder&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: 2.5
 Tested up to: 4.0
-Stable tag: 1.4
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,9 +42,11 @@ manually extract the &lt;Prezi ID&gt; from that same URL.
 
 In addition to a simple embed, you can also set some additional embed options:
 
+1. **align (default = none)**: Aligns the Prezi *left*, *right*, or *center* in your post.
 1. **width (default = 500)**: Width of viewer in pixels.
 1. **height (default = 400)**: Height of viewer in pixels.
 1. **lock_to_path (default = 0)**: Whether to constrain user navigation to Prezi path (1), or let them roam free (0).
+1. **autoplay (default = 0)**: Enables option at bottom of Prezi display to start autoplay.
 1. **html5 (default = 1)**: True (1) to use new HTML5 viewer, false (0) to use Flash-based viewer.
 
 The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default values explicitly set:
@@ -52,6 +54,11 @@ The following shortcode is equivalent to `[prezi id="<Prezi ID>"]`, with default
 `[prezi id="<Prezi ID>" width=500 height=400 lock_to_path=0 html5=1]`
 
 == Changelog ==
+
+= 2.0 =
+* **Enhancement:** Big news in this release is the addition of alignment. You can now center your Prezi
+  as well as align left or right. See installation tab for details.
+* **Enhancement:** Added support for [autoplay](https://prezi.com/support/article/presenting/autoplay/).
 
 = 1.4 =
 * **Enhancement:** Added new [HTML5 option](http://prezibase.com/prezi-old-vs-new-player-embed-code/).

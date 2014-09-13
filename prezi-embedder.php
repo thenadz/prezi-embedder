@@ -5,7 +5,7 @@ defined('WPINC') OR exit;
   Plugin Name: Prezi Embedder
   Plugin URI: http://wordpress.org/extend/plugins/prezi-embedder/
   Description: Allows for embedding the newest iframe-based Prezis from <a href="http://www.prezi.com/recommend/qv1ms7qvtplw">prezi.com</a> using a simple shortcode [prezi id="&lt;your id here&gt;"].
-  Version: 1.4
+  Version: 2.0
   Author: Dan Rossiter
   Author URI: http://danrossiter.org/
   License: GPLv2
@@ -21,12 +21,13 @@ add_action('plugins_loaded', array('PreziEmbedder', 'loadTextDomain'));
 PreziEmbedder::init();
 
 class PreziEmbedder {
-   private static $attr_err, $bool_err, $comment, $int_err, $min_req;
+   private static $attr_err, $bool_err, $comment, $int_err, $min_req, $alignments;
    
    /**
     * Initializes static values for PreziEmbedder.
     */
    public static function init() {
+      // run a maximum of one time per page load
       if (!isset(self::$comment)) {
          self::$comment =
             '<!-- ' .
@@ -40,6 +41,13 @@ class PreziEmbedder {
             __('Error: The %1$s attribute must be an integer. You entered %1$s=%2$s. ', 'prezi-embedder');
          self::$min_req =
             __('Error: You must, at minimum include an id attribute:', 'prezi-embedder');
+         
+         self::$alignments = array(
+            'none'   => '',
+            'left'   => "class='alignleft'",
+            'right'  => "class='alignright'",
+            'center' => "class='aligncenter'"
+         );
       }
    }
    
@@ -54,11 +62,14 @@ class PreziEmbedder {
       // get arguments from user
       extract(shortcode_atts(
          array(
-             'id'           => null,
-             'width'        => 500,
-             'height'       => 400,
-             'lock_to_path' => 0,
-             'html5'        => 1),
+             'id'             => null,
+             'width'          => 500,
+             'height'         => 400,
+             'lock_to_path'   => 0,
+             'autoplay'       => 0,
+             'autohide_ctrls' => 0,
+             'html5'          => 1,
+             'align'          => 'none'),
          $atts));
 
       $err = '';
@@ -86,10 +97,32 @@ class PreziEmbedder {
          $lock_to_path = (int)$lock_to_path;
       }
       
+      if ($autoplay != 0 && $autoplay != 1) {
+         $err .= sprintf(self::$bool_err, 'autoplay', 0, 1, $autoplay);
+      } else {
+         $autoplay = (int)$autoplay;
+      }
+      
+      if ($autohide_ctrls != 0 && $autohide_ctrls != 1) {
+         $err .= sprintf(self::$bool_err, 'autohide_ctrls', 0, 1, $autohide_ctrls);
+      } else {
+         $autohide_ctrls = (int)$autohide_ctrls;
+      }
+      
       if ($html5 != 0 && $html5 != 1) {
          $err .= sprintf(self::$bool_err, 'html5', 0, 1, $html5);
       } else {
          $html5 = (int)$html5;
+      }
+      
+      $align = strtolower($align);
+      if (!array_key_exists($align, self::$alignments))
+      {
+         $err .= sprintf(self::$attr_err, 'align', $align);
+      }
+      else
+      {
+         $align = self::$alignments[$align];
       }
       
       if (empty($id)) {
@@ -102,9 +135,9 @@ class PreziEmbedder {
       return
          self::$comment .
          "<iframe src='//prezi.com/embed/{$id}/?bgcolor=ffffff&amp;" .
-         "lock_to_path={$lock_to_path}&amp;autoplay=0&amp;autohide_ctrls=0&amp;" .
+         "lock_to_path={$lock_to_path}&amp;autoplay={$autoplay}&amp;autohide_ctrls={$autohide_ctrls}&amp;" .
          "features=undefined&amp;disabled_features=undefined&amp;html5={$html5}' " .
-         "width='{$width}' height='{$height}' frameBorder='0' " .
+         "width='{$width}' height='{$height}' frameBorder='0' {$align} " .
          "webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>";
    }
    
